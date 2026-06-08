@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Grid layput</title>
+    <style>
+      .container {
+        display: grid;
+        /* 3 *2 */
+        grid-template: 100px auto 100px / 30fr 70fr;
+        grid-template-areas:
+          "header header"
+          "siderbar main"
+          "footer footer";
+        border: 3px solid lightblue;
+        row-gap: 10px;
+        column-gap: 10px;
+        /* justify-items: center;
+        align-items: center; */
+        /* justify-content: stretch;
+        align-content: stretch; */
+        height: 100vh;
+      }
+      .box {
+        background-color: gold;
+      }
+      .box-one {
+        grid-area: header;
+      }
+      .box-four {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-one">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box box-four">D</div>
+    </div>
+  </body>
+</html>

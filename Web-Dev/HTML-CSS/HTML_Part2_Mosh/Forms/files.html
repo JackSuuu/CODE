@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <style>
+      fieldset {
+        width: 50%;
+      }
+      form {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="file" name="" id="" multiple accept=".jpg, .png" />
+      <input type="file" name="" id="" multiple accept="audio/*" />
+    </form>
+    <fieldset>
+      <legend>Billing Address</legend>
+      <input type="text" required />
+      <button type="submit">Submit</button>
+    </fieldset>
+    <form action="https://formspree.io/f/{form_id}" method="POST">
+      <input type="hidden" name="course-id" value="1234" />
+      <input
+        type="text"
+        placeholder="name"
+        required
+        minlength="3"
+        maxlength="10"
+      />
+      <input type="email" placeholder="email" required minlength="0" />
+      <button type="submit">
+        <i class="fas fa-alert"></i>
+        Submit
+      </button>
+    </form>
+  </body>
+</html>

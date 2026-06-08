@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <!-- Use action to submit text back -->
+    <form action="{% url 'tasks:add' %}" method="post">
+        <!-- Add token, Django will generate a hidden input field for us -->
+        {% csrf_token %}
+        <!-- <input type="text" class="submit-box", name="task" placeholder="Input your task here"> -->
+        <!-- Instead of using the form, we use the Django form tag, Django will automatically generate the form tag for us -->
+        {{ form }} 
+        <div>
+            <input type="submit" class="submit-btn">
+            <div class="link">
+                <a href="{% url 'tasks:index' %}";">View Tasks</a>
+            </div>
+        </div>
+    </form>
+{% endblock %} 

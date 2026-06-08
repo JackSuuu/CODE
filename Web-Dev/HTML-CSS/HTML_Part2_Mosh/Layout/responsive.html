@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive website</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .box {
+        background-color: gold;
+        padding: 1rem;
+      }
+      .box:nth-of-type(2) {
+        background-color: dodgerblue;
+      }
+
+      @media screen and (min-width: 600px) {
+        .container {
+          flex-direction: row;
+        }
+      }
+      @media screen and (min-width: 900px) {
+        .container {
+          flex-direction: row;
+        }
+        .box {
+          background: tomato;
+        }
+      }
+      @media print {
+        body {
+          font-size: 12pt;
+        }
+        .box {
+          padding: 0.5cm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur
+          hic aliquam modi ex exercitationem voluptatem quas mollitia,
+          praesentium voluptatibus qui. Quia optio fuga est odit, veniam cumque
+          voluptatibus sapiente magni!
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+          doloremque nihil expedita facere, pariatur eaque dicta autem,
+          exercitationem, earum aut ipsam facilis qui commodi quae molestiae?
+          Molestias atque voluptatum nobis?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

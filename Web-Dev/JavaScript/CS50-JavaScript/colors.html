@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change the Color</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+  
+        h1{
+            font-family: 'Montserrat', sans-serif;
+            font-size:100px;
+            line-height:100px;
+            margin:0;
+            text-align:center;
+        }
+        
+        .gradient {
+            background: linear-gradient(27deg, #7928CA, #FF0080, #7928CA, #FF0080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h1 class="gradient">My Color</h1> 
+    <h1>can be </h1>
+    <h1 class="gradient">changed</h1>
+    <button id="color-btn">Change</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const h1_text = document.querySelector('h1');
+            const change_btn = document.getElementById('color-btn');
+
+            change_btn.addEventListener('click', () => {
+            h1_text.style.color = "grey";
+            })
+        })
+    </script>
+</body>
+</html>

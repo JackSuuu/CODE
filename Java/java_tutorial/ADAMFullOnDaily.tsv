@@ -1,0 +1,10 @@
+now	2024-04-29T09:00:00+00:00[Europe/London]
+show_comments	yes
+welcome_message	show
+exit_message	yes
+show_config_status	yes
+assignment_file_loading	yes
+assignment_item_processing	yes
+ignore_incomplete_assignments	yes
+output_type	daily
+comment	this is a full basic configuration

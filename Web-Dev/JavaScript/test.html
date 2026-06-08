@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessing Subclasses Example</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello World!</h1>
+      <p>This is a paragraph.</p>
+      <div class="demo1">
+        <p>This is a demo1 paragraph.</p>
+      </div>
+      <div class="demo2">
+        <p>This is a demo2 paragraph.</p>
+      </div>
+    </div>
+
+    <script>
+      // Get the parent container element
+      const container = document.getElementsByClassName("container")[0];
+
+      // Get the child demo2 element
+      const demo2 = container.querySelector(".demo2");
+
+      // Print the inner HTML of the demo2 element
+      console.log(demo2.innerHTML);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+<body>
+    <h1>Auto Counter</h1>
+    <p>using javascript setInterval(trigger, timeout)</p>
+    <h1 id="counterValue">0</h1>
+    <script>
+        document.querySelector('#counterValue').innerHTML = localStorage.getItem('count');
+
+        if (! localStorage.getItem('count')) {
+            localStorage.setItem('count', 0);
+        } 
+
+        let count = localStorage.getItem('count');
+
+        const counterVal = document.getElementById('counterValue');
+
+        setInterval(() => {
+            count ++;
+            counterVal.innerHTML = count;
+            localStorage.setItem('count', count);
+        }, 1000)
+
+    </script>
+</body>
+</html>

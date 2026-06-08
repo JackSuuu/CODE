@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text field</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <style>
+      form {
+        width: 50%;
+        padding: 2rem;
+      }
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" list="countries" autocomplete="off" />
+      <datalist id="countries">
+        <option data-value="1">Australia</option>
+        <option>Canada</option>
+        <option>Indian</option>
+        <option>Japan</option>
+      </datalist>
+
+      <input type="number" />
+      <input type="password" />
+      <input type="date" />
+      <input
+        type="email"
+        value=""
+        placeholder="Email"
+        maxlength="10"
+        autofocus
+      />
+      <textarea name="" id="" cols="30" rows="10">Comment...</textarea>
+    </form>
+  </body>
+</html>

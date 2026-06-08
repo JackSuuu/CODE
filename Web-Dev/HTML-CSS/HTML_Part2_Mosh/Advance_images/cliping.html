@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliping image</title>
+    <style>
+      .landing {
+        width: 500px;
+        clip-path: polygon(
+          0% 20%,
+          60% 20%,
+          60% 0%,
+          100% 50%,
+          60% 100%,
+          60% 80%,
+          0% 80%
+        );
+      }
+      #landing:hover {
+        filter: grayscale(70%) blur(3px) drop-shadow(16px 16px);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/landing.jpg" alt="" class="landing" id="landing" />
+  </body>
+</html>

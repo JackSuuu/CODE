@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter React Tutorial</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 80px;
+        }
+        div {
+            padding: 10px;
+        }
+        #app{
+            border: 2px solid black;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            text-align: center;
+            padding: 23%;
+            margin: 60px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: 0.5s ease-in-out;
+        }
+
+        #problem {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        #winner {
+            font-size: 75px;
+            color: green;
+            text-align: center;
+            font-weight: bold;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            animation-name: appear;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #wineer.show {
+            opacity: 0;
+        }
+
+        #restart-btn {
+            border: 2px black solid;
+            border-radius: 3px;
+            background-color: white;
+            padding: 10px;
+            transition: 0.2s ease-in-out;
+        }
+
+        #restart-btn:hover {
+            background-color: black;
+            color: white;
+            transition: 0.2s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>React Math Ques Tutorial</h1>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        // App component
+        function App() {
+
+            // use js object to represent different variable
+            // Essentially, set state function is used for update the variable
+            const [state, setState] = React.useState({
+                num1: 2,
+                num2: 2,
+                response: "",
+                score: 0,
+                incorrect: false
+            });
+
+            function inputKeyPress(event) {
+                if (event.key === "Enter") {
+                    const answer = parseInt(state.response)
+                    if (state.num1 + state.num2 === answer) {
+                        // User got the quesion right
+                        setState({
+                            ...state,
+                            num1: Math.ceil(Math.random() * 10),
+                            num2: Math.ceil(Math.random() * 10),
+                            response: "",
+                            score: state.score + 1,
+                            incorrect: false
+                        });
+                    } else {
+                        // User got the question wrong
+                        setState({
+                            ...state,
+                            score: state.score - 1,
+                            response: "",
+                            incorrect: true
+                        });
+                    }
+                }
+            }
+
+            function updateResponse(event) {
+                setState({
+                    // use the existing state of the value for everything else
+                    ...state,  // Spread operator: other stay the same
+                    response: event.target.value
+                }); 
+            }
+
+            function reStarteGame(event) {
+                setState({
+                        ...state,
+                        num1: Math.ceil(Math.random() * 10),
+                        num2: Math.ceil(Math.random() * 10),
+                        response: "",
+                        score: 0,
+                        incorrect: false
+                    });
+            }
+            
+            if (state.score === 10) {
+                return (
+                    <div>
+                        <div id="winner">
+                        You Won!!!🎉
+                        </div>
+                        <button id="restart-btn" onClick={reStarteGame}>Restart the game</button>
+                    </div>
+                )
+            }
+            
+            return(
+                <div>
+                    <div className={state.incorrect ? "incorrect" : ""} id="problem">{state.num1} + {state.num2} = ?</div>
+                    <input autoFocus={true} onKeyPress={inputKeyPress} onChange={updateResponse} value={state.response} />
+                    <div>Score: {state.score}</div>
+                </div>
+            );
+        }
+
+        // render the component(<function />, get the html element)
+        ReactDOM.render(<App />, document.querySelector('#app'));
+    </script>
+</body>
+</html>

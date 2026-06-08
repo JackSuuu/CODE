@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise and Await</title>
+    <style>
+
+        h2 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        p {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- The keyword async 
+        before a function makes the function return a promise: -->
+    <h2 class="demo">How to use promise and await</h2>
+    <hr style="width: 200px;">
+    <p>This is a demo for my JavaScript courses</p>
+
+    <script>
+        function greet(name) {
+            return new Promise(function(resolve) {
+                setTimeout(function() {
+                console.log(`Hello, ${name}!`);
+                resolve();
+                }, 3000);
+            });
+        }
+
+        async function sayHelloAndGoodbye() {
+            await greet("Bob");
+            console.log("Hello again!");
+            await greet("Charlie");
+            console.log("Goodbye!");
+        }
+
+        sayHelloAndGoodbye();
+    </script>
+</body>
+</html>

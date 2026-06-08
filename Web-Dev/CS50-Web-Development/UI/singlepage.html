@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page</title>
+    <style>
+        div {
+            display: none;
+            width: 200px;
+            height: 200px;
+            color: white;
+            text-align: center;
+            background-color: chocolate;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function showPage(page) {
+            // get all the page, set them to none first
+            document.querySelectorAll('div').forEach(div => {
+                div.style.display = 'none';
+            })
+            document.querySelector(`#${page}`).style.display = 'block'
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('button').forEach(button => {
+                button.onclick = function() {
+                    showPage(this.dataset.page)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <button data-page="page1">Page 1</button>
+    <button data-page="page2">Page 2</button>
+    <button data-page="page3">Page 3</button>
+    <div id="page1" style="background-color: black;">
+        <h1>This is page one</h1>
+    </div>
+    <div id="page2" style="background-color: rgba(255, 0, 0, 0.704);">
+        <h1>This is page two</h1>
+    </div>
+    <div id="page3" style="background-color: rgb(81, 113, 33);">
+        <h1>This is page three</h1>
+    </div>
+</body>
+</html>

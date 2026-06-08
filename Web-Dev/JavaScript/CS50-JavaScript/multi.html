@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Multiple Query from HTML element</title>
+</head>
+<body>
+    <h1 id="hello">Hello!</h1>
+    <select style="display: block; margin-bottom: 30px;" id="name">
+        <option value="Hello Jack!">Jack</option>
+        <option value="Hello Harry!">Harry</option>
+        <option value="Hello Luly!">Luly</option>
+    </select>
+
+    <select style="display: block; margin-bottom: 30px;" id="color">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="pink">Pink</option>
+    </select>
+
+    <button data-color="red">Red</button>
+    <button data-color="blue">Blue</button>
+    <button data-color="green">Green</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#color').onchange = (e) => {
+                document.querySelector('#hello').style.color = e.target.value;
+            };
+
+            document.querySelector('#name').onchange = (e) => {
+                document.querySelector('#hello').innerHTML = e.target.value;
+            }
+
+            document.querySelectorAll('button').forEach((button) => {
+                button.onclick = () => {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

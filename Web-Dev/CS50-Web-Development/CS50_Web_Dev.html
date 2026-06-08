@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 50 Web Dev Full Course</title>
+    <link rel="stylesheet" href="CS50_Web_Dev.css">
+    <link rel="stylesheet" href="variables.scss">
+</head>
+<body>
+     <h1>CS 50 Web Dev Full Course</h1>
+     <div id="jack_intro_block">
+        <p id="jack_intro">I am Jack, Welcome to my web pages</p>
+        <ul>
+            <li>Coding</li>
+            <li>Learning</li>
+            <li>Life style</li>
+        </ul>
+        <q>He who has a why to live for can bear almost any how</q>
+     </div>
+     <img src="Img/jack_back.jpeg" alt="Jack" style="height: 400px; width: auto; border: 3px solid rgb(131, 60, 181);">
+     <!-- Note that a tag can not only open web page, it can also link to existing pages -->
+     <a href="https://www.google.com.hk/?gws_rd=ssl" style="display: block; padding-top: 20px; font-size: 20px;">Go to Google</a>
+     <hr style="border: 1px solid black; border-radius: 5px;">
+     <table>
+        <!-- Table Heading -->
+        <h2>Table</h2>
+        <thead>
+            <tr>
+                <th>Ocean</th>
+                <th>Average Depth</th>
+                <th>Maximum Depth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pacific Ocean</td>
+                <td>4,280 m</td>
+                <td>10,911 m</td>
+            </tr>
+            <tr>
+                <td>Atlantic Ocean</td>
+                <td>3,646 m</td>
+                <td>8,486 m</td>
+            </tr>
+        </tbody>
+     </table>
+     <h2>Form</h2>
+     <form>
+        <div>
+            <input class="input_field" type="text" placeholder="Full Name" name="name" id="">
+            <input class="input_field" type="password" placeholder="password" name="Password" id="">
+        </div>
+        <div style="padding-top: 10px;">
+            <input class="input_field" name="country" list="countries" placeholder="Country">
+            <datalist id="countries">
+                <option value="Afghanistan"></option>
+                <option value="Albania"></option>
+                <option value="Algeria"></option>
+                <option value="Andorra"></option>
+                <option value="Angola"></option>
+            </datalist>
+        </div>
+        <input class="btn" type="submit" value="Submit" style="margin-top: 10px;">
+     </form>
+     <!-- Two layout, flexbox and grid -->
+     <h2>FlexBox Layout</h2>
+     <div class="flex_container">
+        <div class="flex_block block">Block_1</div>
+        <div class="flex_block block">Block_2</div>
+        <div class="flex_block block">Block_3</div>
+        <div class="flex_block block">Block_4</div>
+        <div class="flex_block block">Block_5</div>
+        <div class="flex_block block">Block_6</div>
+     </div>
+     <h2>Grid Layout</h2>
+     <div class="grid_container">
+        <div class="grid_block block">Block_1</div>
+        <div class="grid_block block">Block_2</div>
+        <div class="grid_block block">Block_3</div>
+        <div class="grid_block block">Block_4</div>
+        <div class="grid_block block">Block_5</div>
+        <div class="grid_block block">Block_6</div>
+     </div>
+     <h2>Sass CSS</h2>
+     <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world</p>
+     <h1>End</h1>
+</body>
+</html>

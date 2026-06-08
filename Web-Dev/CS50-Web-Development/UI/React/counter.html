@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter React Tutorial</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <h1>React Counter Tutorial</h1>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        // App component
+        function App() {
+            
+            // in react if we use the state
+            // we have to use the function setCount that provides to us
+            const [count, setCount] = React.useState(0);
+
+            function updateCount() {
+                setCount(count + 1)
+            }
+
+            return (
+                // write HTML syntax inside of javascript
+                <div>
+                    <h2>{count}</h2>
+                    <button onClick={updateCount}>Count</button>
+                </div>
+            );
+        }
+
+        // render the component(<function />, get the html element)
+        ReactDOM.render(<App />, document.querySelector('#app'));
+    </script>
+</body>
+</html>

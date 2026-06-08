@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+</head>
+<body>
+    <h1>Dummy API JS</h1>
+    <div id="content"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('//dummyjson.com/products')
+            .then(response => response.json())
+            // .then(console.log)
+            .then(data => {
+                const products = data.products;
+                products.forEach(product => {
+                   const contentElement = document.getElementById("content");
+                   contentElement.innerHTML += `<p>ID: ${product.id} -->  Title: ${product.title}</p>`;
+                })
+            })
+        })
+    </script>
+</body>
+</html>

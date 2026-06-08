@@ -1,0 +1,135 @@
+:root {
+    --font-size: 14px;
+    --color-var: #2f2f2f;
+}
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 2rem;
+    background-color: #dadaf2;
+}
+
+h1 {
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
+    border: 5px solid #667eea;
+    border-radius: 10px;
+}
+
+li {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: var(--font-size);
+    color: var(--color-var);
+}
+
+q {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+a {
+    font-weight: bold;
+}
+
+img {
+    border-radius: 10px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+    padding: 0.4rem;
+}
+
+#jack_intro_block {
+    background-color: whitesmoke;
+    padding: 15px;
+    margin: 20px 0px;
+    border: 2px solid #b351cb;
+    border-radius: 10px;
+}
+
+#jack_intro {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.btn {
+    width: 100px;
+    color: white;
+    background-color: #667eea;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: ease-in;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #667eeabb;
+    transition: ease-in;
+}
+
+.input_field {
+    border: 2px solid black; 
+    padding: 5px;
+}
+
+@media (min-width: 753px) {
+    body {
+        background-color: #667eea;
+        transition: ease all .5s;
+    }
+}
+
+@media (max-width: 752px) {
+    body {
+        background-color: #dadaf2;
+        
+    }
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.flex_container {
+    display: flex;
+    /* The purpose of using wrap is to wrap elements into next line
+    when space is not enough to display them */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.flex_block {
+    color: #dadaf2;
+    background-color: #764ba2;
+}
+
+.grid_container {
+    background-color: green;
+    border-radius: 10px;
+    display: grid;
+    padding: 10px;
+    grid-template-rows: repeat(2, 130px) auto;
+    grid-template-columns:  repeat(2, 100px) auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.grid_block {
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+}

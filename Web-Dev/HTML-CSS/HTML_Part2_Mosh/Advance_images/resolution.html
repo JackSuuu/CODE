@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High density resolution</title>
+    <style>
+      resolution {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="images/resolution.jpg"
+      alt="A dashboad with word resolution"
+      class="resolution"
+      srcset="
+        images/resolution.jpg    1x,
+        images/resolution@2x.jpg 2x,
+        images/resolution@3x.jpg 3x
+      "
+    />
+  </body>
+</html>

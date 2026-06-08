@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag The Div</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="position: absolute; top: 40px;">Click the mouse and drag the purplse rect</h1>
+    <div class="container" data-follow></div>
+
+    <script src="https://unpkg.com/follow-js/dist/follow.min.js" data-follow-auto></script>
+
+    <script>
+        let isDragging = false;
+
+        document.addEventListener('mousedown', (e) => {
+            isDragging = true;
+        })
+
+        document.addEventListener('mouseup', (e) => {
+            isDragging = false;
+        })
+
+        document.addEventListener('mousemove', (e) => {
+            // const rect = container.getBoundingClientRect();
+            // let isInElement = e.clientX >= rect.left && e.clientX <= rect.right && 
+            // e.clientY >= rect.top && e.clientY <= rect.bottom;
+
+            if (isDragging) {
+                const container = document.querySelector('.container');
+                container.style.left = e.pageX - 50 + 'px';
+                container.style.top = e.pageY - 50 + 'px';
+            }
+        })
+    </script>
+</body>
+</html>

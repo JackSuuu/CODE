@@ -1,0 +1,209 @@
+# ============================================================
+# OS & IDE
+# ============================================================
+.DS_Store
+.DS_Store?
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ============================================================
+# Compiled binaries & executables
+# ============================================================
+*.o
+*.out
+a.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.jar
+*.war
+*.ear
+*.dex
+
+# ============================================================
+# C / C++ build artifacts
+# ============================================================
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+*.cmake
+*.make
+my_program
+spinning_cube
+rest_api
+C/cache
+C/fork
+C/bubble_sort
+C/first
+C/memory
+C/pacman
+C/program
+C++/basic_grammar
+C++/cpp_crush_course
+C++/output
+C++/singlely-linkedlist
+C++/tutorial
+Java/algorithm_4th_edition/dynamic_array
+Swift/cyber-todoist/app/
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+.env
+*.egg-info/
+dist/
+*.egg
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+
+# ============================================================
+# Java / Maven / Gradle
+# ============================================================
+target/
+*.class
+*.jar
+.classpath
+.project
+.settings/
+bin/
+
+# ============================================================
+# Node.js / Web
+# ============================================================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# ============================================================
+# Haskell
+# ============================================================
+.stack-work/
+dist-newstyle/
+*.hi
+*.p_hi
+*.p_o
+cabal-dev/
+
+# ============================================================
+# Swift / Xcode
+# ============================================================
+.build/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ============================================================
+# R
+# ============================================================
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# ============================================================
+# Docker
+# ============================================================
+.dockerignore
+
+# ============================================================
+# Misc archives & packages
+# ============================================================
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ============================================================
+# Large / binary media & model files
+# ============================================================
+# AI / ML models
+*.gguf
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.tflite
+*.onnx
+*.pb
+*.h5
+
+# Video
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Audio
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.aac
+*.m4a
+
+# Fonts
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# 3D models / binary assets
+*.glb
+*.gltf
+*.fbx
+*.obj
+
+# Mac app bundles
+*.app/
+
+# Mac icon / nib / binary resources
+*.icns
+*.nib
+*.car
+
+# Figma design files
+*.fig
+
+# PDF / Office docs (too large, not source code)
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# Large data files
+*.csv
+*.parquet
+*.sqlite
+*.db
+
+# package-lock / yarn lock (auto-generated, noisy)
+package-lock.json
+yarn.lock

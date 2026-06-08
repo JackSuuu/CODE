@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack To Do List</title>
+    <style>
+        body {
+            background-color: rgb(235, 153, 0);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        section {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            height: 250px;
+            background-color: rgb(221, 218, 218);
+            font-size: 100px;
+            padding: 20px;
+            padding-bottom: 0%;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        hr {
+            border: 2px solid black;
+        }
+
+        .card_list {
+            background-color: rgb(221, 218, 218);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .jack-word {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 80px;
+            color: rgb(235, 153, 0);
+            -webkit-text-stroke: 2.5px black;
+            white-space: initial;
+            overflow-wrap: break-word;
+        }
+
+        .submit-box {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: medium;
+            padding: 8px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .submit-btn {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: medium;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: rgb(235, 153, 0);
+            cursor: pointer;
+            transition: ease-out;
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(246, 246, 246);
+            transition: ease-in;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        .link {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            background-color: rgb(235, 153, 0);
+            border: 2.5px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>The <span class="jack-word">Jack</span> <p style="position: relative; top: -95px;">Todoist<p></h1>
+        <hr>
+        <div class="card_list">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </section>
+</body>
+</html>

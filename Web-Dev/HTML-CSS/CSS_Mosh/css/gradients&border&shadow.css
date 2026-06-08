@@ -1,0 +1,28 @@
+/* .box{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom right, dodgerblue, yellow, tomato);
+} */
+
+/* .box{
+    width: 400px;
+    height: 200px;
+    background: dodgerblue;
+    border: 10px dashed royalblue; 
+    border-top: 20px solid rgb(125, 153, 235);
+    border-width: 10px 20px 10px 20px;
+    border-radius: 50px;
+} */
+
+.box{
+    width: 400px;
+    height: 200px;
+    background: gold;
+    box-shadow: 0px 0px 50px grey;
+}
+
+h1{
+    color: whitesmoke;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
